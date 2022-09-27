@@ -1,3 +1,3 @@
-export default function AuthForm({ mode }) {
-  return <div>Auth form in { mode } mode</div>;
+export default function AuthForm() {
+  return <div>Auth form in mode</div>;
 }

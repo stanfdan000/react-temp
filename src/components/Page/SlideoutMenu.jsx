@@ -3,7 +3,7 @@ import Navigation from './Navigation.jsx';
 import styles from './SlideoutMenu.css';
 import classnames from 'classnames';
 
-export default function SlideoutMenu({ navigation }) {
+export default function SlideoutMenu(navigation) {
   const [isOpen, setIsOpen] = useState(false);
 
   const className = classnames(styles.SlideoutMenu, {
