@@ -1,5 +1,4 @@
-.Dashboard {
-    background: rgb(230, 1, 1);
+.nav {
     background-color: gray;
     display: flex;
     gap: 20px;
@@ -8,4 +7,5 @@
     justify-content: flex-end;
     align-content: stretch;
     flex-wrap: nowrap;
-  }
+
+}
