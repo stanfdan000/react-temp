@@ -36,7 +36,7 @@
   
   body {
     font-family: var(--primary-font);
-    background: var(--background-color);
+    background: var(url('../assets/rick-and-morty-breaking-bad-4k-o0-1920x1080.jpg'));
     color: var(--black-color);
   }
   
