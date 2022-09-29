@@ -44,6 +44,7 @@ export function SelectControl({ label, children, placeholder, ...rest }) {
 }
 
 export function CheckBoxController({ legend, label, ...rest }) {
+  console.log(legend);
   return (
     <fieldset className={styles.CheckBoxController}>
       <legend className={styles.LabelText}>{legend}</legend>
@@ -56,5 +57,6 @@ export function CheckBoxController({ legend, label, ...rest }) {
 }
 
 export function FormButton({ text }) {
+  console.log(text);
   return <button className={styles.FormButton}>{text}</button>;
 }
