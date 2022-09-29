@@ -18,7 +18,7 @@ export default function Dashboard() {
         <label>
           Options
           <select required>
-            <option disabled selected value="">
+            <option defaultValue="">
               select a option
             </option>
             <option value="1">A</option>

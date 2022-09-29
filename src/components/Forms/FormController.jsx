@@ -21,3 +21,12 @@ export function InputController({ label, ...rest }) {
   );
 }
 
+export function TextAreaControl({ label, ...rest }) {
+  console.log(rest);
+  return (
+    <FormController label={label}>
+      <textarea {...rest}/>
+    </FormController>
+  );
+}
+

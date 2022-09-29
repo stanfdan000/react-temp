@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { 
   InputController,
+  TextAreaControl,
 } from './FormController.jsx';
 
 test('INPUT CONTROL', async () => {
@@ -18,3 +19,22 @@ test('INPUT CONTROL', async () => {
   expect(inputController.required).toBe(true);
 
 });
+
+test('text area control', async () => {
+  render(
+    <TextAreaControl
+      label="Bio"
+      name="bio"
+      required
+      placeholder="about you"
+    />
+  );
+  const textAreaControl = screen.getByLabelText('Bio');
+  expect(textAreaControl.name).toBe('bio');
+  expect(textAreaControl.required).toBe(true);
+  expect(textAreaControl.placeholder).toBe('about you');
+
+});
+
+
+
