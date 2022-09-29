@@ -30,3 +30,15 @@ export function TextAreaControl({ label, ...rest }) {
   );
 }
 
+
+export function SelectControl({ label, children, placeholder, ...rest }) {
+  console.log(children);
+  return (
+    <FormController label={label}>
+      <select {...rest}>
+        {placeholder && <option disabled>{placeholder}</option>}
+        {children}
+      </select>
+    </FormController>
+  );
+}
