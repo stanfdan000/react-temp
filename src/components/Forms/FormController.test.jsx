@@ -3,6 +3,7 @@ import {
   InputController,
   TextAreaControl,
   SelectControl,
+  CheckBoxController,
 } from './FormController.jsx';
 
 test('INPUT CONTROL', async () => {
@@ -50,6 +51,23 @@ test('select control', async () => {
   expect(selectControl.required).toBe(true);
   expect(selectControl.options.length).toBe(3);
 });
+
+
+test('check box control', async () => {
+  render(
+    <CheckBoxController
+      legend = "Do you accept?"
+      label = "Yes!"
+      name = "accept"
+      required
+    />
+  );
+  const legend = screen.getByText('Do you accept?');
+  expect(legend).not.toBeNull();
+  const checkBoxController = screen.getByLabelText('Yes!');
+  expect(checkBoxController.required).toBe(true);
+});
+
 
   
 
