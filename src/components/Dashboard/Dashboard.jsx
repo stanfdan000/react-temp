@@ -1,48 +1,51 @@
 import styles from './Dashboard.css';
+import { 
+  InputController,
+  TextAreaControl,
+  SelectControl,
+  CheckBoxController,
+  FormButton,
+} from '../Forms/FormController.jsx';
+
 
 export default function Dashboard() {
   return( 
     <div className={styles.Dashboard}>
       
       <form>
-        <label>
-          name
-          <input name="name" placeholder="your name"/>
-        </label>
+        <InputController
+          label="Name"
+          name="name"
+          placeholder="Your name"/>
 
-        <label>
-          date
-          <input type="date" name="date" placeholder="pick a date"/>
-        </label>
+        <InputController
+          label="Date"
+          required
+          type="date"
+          name="date"
+          placeholder="Pick a date"/>
 
-        <label>
-          Options
-          <select required>
-            <option defaultValue="">
-              select a option
-            </option>
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">C</option> 
-          </select>
-        </label>
+        <SelectControl
+          label="Letter"
+          required
+          placeholder="Select a letter">
+          <option value="1">A</option>
+          <option value="2">B</option>
+          <option value="3">C</option>
+        </SelectControl>
 
-        <label>bio
-          <textarea name="bio" placeholder="tell us about yourself"/>
-        </label>
+        <TextAreaControl
+          label="Bio"
+          name="bio"
+          placeholder="Tell us about yourself"/>
 
-        <fieldset>
-          <legend>do you accept</legend>
-          <label className={styles.OptionLabel}>
-            <input type="checkbox"/>
-            Yes
-          </label>
-        </fieldset>
+        <CheckBoxController legend="Do you accept" label="Yes"/>
 
-        <button>Submit</button>
+        <FormButton text="Submit"/>
       </form>
-    
-
     </div>
   );
 }
+
+    
+

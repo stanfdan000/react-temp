@@ -13,7 +13,7 @@ export function FormController({ label, children }) {
 
 
 export function InputController({ label, ...rest }) {
-  console.log(rest);
+  
   return (
     <FormController label={label}>
       <input {...rest} />
@@ -22,7 +22,7 @@ export function InputController({ label, ...rest }) {
 }
 
 export function TextAreaControl({ label, ...rest }) {
-  console.log(rest);
+  
   return (
     <FormController label={label}>
       <textarea {...rest}/>
@@ -32,7 +32,7 @@ export function TextAreaControl({ label, ...rest }) {
 
 
 export function SelectControl({ label, children, placeholder, ...rest }) {
-  console.log(children);
+  
   return (
     <FormController label={label}>
       <select {...rest}>
@@ -44,6 +44,7 @@ export function SelectControl({ label, children, placeholder, ...rest }) {
 }
 
 export function CheckBoxController({ legend, label, ...rest }) {
+  
   return (
     <fieldset className={styles.CheckBoxController}>
       <legend className={styles.LabelText}>{legend}</legend>
@@ -56,5 +57,6 @@ export function CheckBoxController({ legend, label, ...rest }) {
 }
 
 export function FormButton({ text }) {
+  
   return <button className={styles.FormButton}>{text}</button>;
 }
