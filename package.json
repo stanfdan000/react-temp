@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
+    "lint": "eslint --ext js --ext jsx src",
     "start": "webpack serve --hot --mode development --devtool eval-source-map --open",
     "start:watch": "npm run start",
     "build": "webpack --devtool source-map"
@@ -15,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.3.2",
+    "lint": "^0.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1"
